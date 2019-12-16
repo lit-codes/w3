@@ -7,14 +7,18 @@ import 'typeface-roboto';
 /* Better CSS suppport for browsers, some good defaults */
 import CssBaseline from '@material-ui/core/CssBaseline';
 import NavBar from './NavBar';
-console.log(NavBar);
+import UnderConstruction from './UnderConstruction';
 
 function App(props) {
     return (
-        <React.fragment>
+        <React.Fragment>
             <CssBaseline />
-            <NavBar />
-        </React.fragment>
+            {
+                document.location.hash === '#show-me'
+                ? <NavBar />
+                : <UnderConstruction />
+            }
+        </React.Fragment>
     );
 }
 

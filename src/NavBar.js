@@ -9,7 +9,7 @@ function NavBar() {
         <div>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="title" color="inherit">
+                    <Typography inherit="title" color="inherit">
                         Lit codes
                     </Typography>
                 </Toolbar>
