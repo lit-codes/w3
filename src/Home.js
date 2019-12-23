@@ -19,15 +19,18 @@ const useStyles = makeStyles(theme => ({
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         color: theme.palette.primary.text,
-        padding: theme.spacing(15),
+        paddingTop: theme.spacing(15),
+        paddingBottom: theme.spacing(15),
     },
     features: {
         backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(15),
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
     },
     gallery: {
         backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(15),
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
         justifyContent: 'center',
     },
     title: {
