@@ -3,7 +3,7 @@
     "start": "parcel -d lit.codes watch src/index.html",
     "build": "parcel -d lit.codes build src/index.html",
     "style": "eslint --fix *.js",
-    "deploy": "cd lit.codes && now --prod"
+    "deploy": "cd lit.codes && now --prod -A ../now.json"
   },
   "dependencies": {
     "@material-ui/core": "^4.7.2",

@@ -12,7 +12,8 @@ import SideDrawer from './SideDrawer';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        margin: theme.spacing(2),
+        backgroundColor: theme.palette.secondary.light,
+        padding: theme.spacing(2),
         display: 'flex',
         justifyContent: 'center',
     },
