@@ -1,7 +1,7 @@
 import React from 'react';
 /* Better CSS suppport for browsers, some good defaults */
 import Paper from '@material-ui/core/Paper';
-import UnderConstructionImage from './UnderConstructionImage.jpg';
+import UnderConstructionImage from './images/UnderConstructionImage.jpg';
 
 const styles = {
     background: {

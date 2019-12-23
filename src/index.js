@@ -2,23 +2,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route } from "react-router-dom";
 /* Load the whole roboto font, may not be very optimized */
 import 'typeface-roboto';
 /* Better CSS suppport for browsers, some good defaults */
 import CssBaseline from '@material-ui/core/CssBaseline';
-import NavBar from './NavBar';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import Home from './Home';
 import UnderConstruction from './UnderConstruction';
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#311b92',
+            light: '#6746c3',
+            dark: '#000063',
+            text: '#ffffff',
+        },
+        secondary: {
+            main: '#d1c4e9',
+            light: '#fff7ff',
+            dark: '#a094b7',
+            contrastText: '#000000',
+        },
+    },
+    typography: {
+        useNextVariants: true
+    }
+});
 
 function App(props) {
     return (
-        <React.Fragment>
+        <BrowserRouter>
             <CssBaseline />
-            {
-                document.location.hash === '#show-me'
-                ? <NavBar />
-                : <UnderConstruction />
-            }
-        </React.Fragment>
+           <MuiThemeProvider theme = { theme }>
+                <Route exact path='/' component={UnderConstruction} />
+                <Route exact path='/home' component={Home} />
+            </MuiThemeProvider>
+        </BrowserRouter>
     );
 }
 
