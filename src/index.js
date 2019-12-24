@@ -9,6 +9,7 @@ import 'typeface-roboto';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Home from './Home';
+import About from './About';
 import UnderConstruction from './UnderConstruction';
 
 const theme = createMuiTheme({
@@ -38,6 +39,7 @@ function App(props) {
            <MuiThemeProvider theme = { theme }>
                 <Route exact path='/' component={UnderConstruction} />
                 <Route exact path='/home' component={Home} />
+                <Route exact path='/about' component={About} />
             </MuiThemeProvider>
         </BrowserRouter>
     );
