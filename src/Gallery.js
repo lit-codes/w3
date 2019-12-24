@@ -97,7 +97,7 @@ function Gallery() {
                                     Beacon🚨
                                 </Typography>
                                 <Typography variant="subtitle1" className={classes.description} paragraph>
-                                    Subscribe to vulnerabilities on you favorite package manager and get notified based on the severity.
+                                    Subscribe to vulnerabilities on your favorite package manager and get notified based on the severity.
                                 </Typography>
                                 <Box className={classes.beacon}></Box>
                             </Container>
