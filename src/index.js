@@ -11,6 +11,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Home from './Home';
 import About from './About';
 import Careers from './Careers';
+import Gallery from './Gallery';
 import ContactUs from './ContactUs';
 import UnderConstruction from './UnderConstruction';
 
@@ -43,6 +44,7 @@ function App(props) {
                 <Route exact path='/home' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/careers' component={Careers} />
+                <Route exact path='/gallery' component={Gallery} />
                 <Route exact path='/contact-us' component={ContactUs} />
             </MuiThemeProvider>
         </BrowserRouter>
