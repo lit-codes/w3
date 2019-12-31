@@ -21,3 +21,7 @@ Lit Code cares about customer satisfaction, and not just in words, we constantly
 # Global team
 
 We are a global team located from far east to the west, we work 24 hours a day to make a project a reality.
+
+# Contributions to Open Source
+
+We pay our developers to work on Open Source projects that help us build better software to our customers, we use and build open source software all the time.
