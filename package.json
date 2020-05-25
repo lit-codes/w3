@@ -1,15 +1,15 @@
 {
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel -d lit-codes watch src/index.html",
+    "build": "parcel -d lit-codes build src/index.html",
     "style": "eslint --fix *.js",
-    "deploy": "gh-pages -d dist"
+    "staging": "cd lit-codes && now -A ../now.json",
+    "deploy": "cd lit-codes && now --prod -A ../now.json"
   },
   "dependencies": {
-    "@material-ui/core": "^4.7.2",
+    "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
-    "clsx": "^1.0.4",
-    "prop-types": "^15.7.2",
+    "babel-polyfill": "^6.26.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -19,6 +19,8 @@
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "now": "^17.1.1",
+    "parcel": "^1.12.4"
   }
 }
