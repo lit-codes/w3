@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
     logo: {
         width: '7rem',
     },
+    link: {
+        textDecoration: 'none',
+        color: theme.palette.primary.text,
+    },
 }));
 
 function BigScreen() {
@@ -60,6 +64,7 @@ function SmallScreen() {
                 <Box flexGrow={1}>
                     <img src={Logo} className={classes.logo}/>
                 </Box>
+                <Button className={classes.link} color="inherit" target="_blank" href="https://blog.lit.codes/">Blog</Button>
             </Toolbar>
         </AppBar>
     );

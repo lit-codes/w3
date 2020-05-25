@@ -6,10 +6,6 @@ import Button from '@material-ui/core/Button';
 /* Custom Components */
 
 const useStyles = makeStyles(theme => ({
-    transparentAppBar: {
-        background: 'transparent',
-        boxShadow: 'none',
-    },
     link: {
         textDecoration: 'none',
         color: theme.palette.primary.text,
