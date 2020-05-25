@@ -94,7 +94,7 @@ function BigScreen() {
                                 <Box display="flex">
                                     <ScheduleIcon className={classes.time} /> 05/15/2020
                                 </Box>
-                                <Button color="secondary" variant="contained" target="_blank" className={classes.readMore} href="https://blog.lit.codes/intro-to-benchmarking-and-profiling/">
+                                <Button color="secondary" variant="contained" className={classes.readMore} target="_blank" href="https://blog.lit.codes/intro-to-benchmarking-and-profiling/">
                                     Read Here
                                 </Button>
                             </CardActions>
@@ -121,7 +121,7 @@ function BigScreen() {
                                 <Box display="flex">
                                     <ScheduleIcon className={classes.time} /> 05/05/2020
                                 </Box>
-                                <Button color="secondary" variant="contained" target="_blank" className={classes.readMore} href="https://blog.lit.codes/hacking-with-ssh/">
+                                <Button color="secondary" variant="contained" className={classes.readMore} target="_blank" href="https://blog.lit.codes/hacking-with-ssh/">
                                     Read Here
                                 </Button>
                             </CardActions>
@@ -146,9 +146,9 @@ function BigScreen() {
                             </CardActionArea>
                             <CardActions className={classes.actions}>
                                 <Box display="flex">
-                                    <ScheduleIcon className={classes.time} /> 02-5-2020
+                                    <ScheduleIcon className={classes.time} /> 04/29/2020
                                 </Box>
-                                <Button color="secondary" variant="contained" className={classes.readMore}>
+                                <Button color="secondary" variant="contained" className={classes.readMore} target="_blank" href="https://blog.lit.codes/how-to-compile-chef-from-source/">
                                     Read Here
                                 </Button>
                             </CardActions>
