@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -33,7 +34,14 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(5),
     },
     subtitle: {
-        marginTop: theme.spacing(1),
+        marginTop: theme.spacing(4),
+    },
+    smallSubtitle: {
+        marginTop: theme.spacing(4),
+        background: 'rgba(0, 0, 0, 0.8)',
+        padding: theme.spacing(4),
+        border: '5px solid',
+        borderImage: 'linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1',
     },
     link: {
         textDecoration: 'none',
@@ -41,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function WhyUs() {
+function BigScreen() {
     const titleRef = useRef();
     const subtitleRef = useRef();
     const buttonsRef = useRef();
@@ -76,6 +84,34 @@ function WhyUs() {
                 </Grid>
             </Container>
         </Box>
+    );
+}
+
+function SmallScreen() {
+    const classes = useStyles();
+
+    return (
+        <Box className={classes.heroContainer}>
+            <Container maxWidth='md'>
+                <Grid container spacing={2} className={classes.hero}>
+                    <Grid item md={9}>
+                        <Typography variant="h2">
+                            We are 🔥 coders!
+                        </Typography>
+                        <Typography variant="subtitle1" className={classes.smallSubtitle}>
+                            We build the future of the enterprise level and open source software, let us create your dream product or join our community of excellent developers. Drop us an email at <a className={classes.link} href="mailto:create@lit.codes?subject=Hi!" target="_blank">create@lit.codes</a>.
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
+    );
+}
+
+function WhyUs() {
+    const isBigScreen = useMediaQuery('(min-width:1366px)');
+    return (
+        isBigScreen ? <BigScreen /> :  <SmallScreen />
     );
 }
 

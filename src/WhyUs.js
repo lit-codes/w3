@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -38,8 +39,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: theme.spacing(16),
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
-        height: '100vh',
-        maxHeight: '50vh',
+        height: '500px',
         backgroundImage: `url('${MaleDeveloper}')`,
     },
     papers: {
@@ -64,7 +64,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function WhyUs() {
+function BigScreen() {
+    const isTooSmall = useMediaQuery('(max-width:1366px)');
     const paperOneRef = useRef();
     const paperTwoRef = useRef();
     const paperThreeRef = useRef();
@@ -79,6 +80,8 @@ function WhyUs() {
     }, []);
 
     return (
+        isTooSmall ?
+        <div></div> :
         <Box className={classes.maleDeveloper}>
             <div className={classes.link} id="about"></div>
             <Box className={classes.whyUsContainer}>
@@ -132,6 +135,17 @@ function WhyUs() {
                 </Box>
             </Box>
         </Box>
+    );
+}
+
+function SmallScreen() {
+    return (<div></div>);
+}
+
+function WhyUs() {
+    const isBigScreen = useMediaQuery('(min-width:1366px)');
+    return (
+        isBigScreen ? <BigScreen /> :  <SmallScreen />
     );
 }
 

@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -45,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function Product() {
+function BigScreen() {
     const productsDefcriptionRef = useRef();
     const icon1Ref = useRef();
     const icon2Ref = useRef();
@@ -124,6 +125,17 @@ function Product() {
                 </Grid>
             </Container>
         </Box>
+    );
+}
+
+function SmallScreen() {
+    return (<div></div>);
+}
+
+function Product() {
+    const isBigScreen = useMediaQuery('(min-width:1366px)');
+    return (
+        isBigScreen ? <BigScreen /> :  <SmallScreen />
     );
 }
 

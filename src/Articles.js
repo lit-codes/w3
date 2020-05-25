@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -49,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function Articles() {
+function BigScreen() {
     const titleRef = useRef();
     const card1Ref = useRef();
     const card2Ref = useRef();
@@ -158,5 +159,17 @@ function Articles() {
         </Box>
     );
 }
+
+function SmallScreen() {
+    return (<div></div>);
+}
+
+function Articles() {
+    const isBigScreen = useMediaQuery('(min-width:1366px)');
+    return (
+        isBigScreen ? <BigScreen /> :  <SmallScreen />
+    );
+}
+
 
 export default Articles;

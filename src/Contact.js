@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -51,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function Contact() {
+function BigScreen() {
     const titleRef = useRef();
     const descriptionRef = useRef();
     const classes = useStyles();
@@ -83,6 +84,17 @@ function Contact() {
                 </Box>
             </Container>
         </Box>
+    );
+}
+
+function SmallScreen() {
+    return (<div></div>);
+}
+
+function Contact() {
+    const isBigScreen = useMediaQuery('(min-width:1366px)');
+    return (
+        isBigScreen ? <BigScreen /> :  <SmallScreen />
     );
 }
 

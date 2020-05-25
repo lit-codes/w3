@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function Header() {
+function BigScreen() {
     const toolbarRef = useRef();
     const classes = useStyles();
 
@@ -47,6 +48,27 @@ function Header() {
                 <Links />
             </Toolbar>
         </AppBar>
+    );
+}
+
+function SmallScreen() {
+    const classes = useStyles();
+
+    return (
+        <AppBar position="fixed" className={classes.transparentAppBar}>
+            <Toolbar>
+                <Box flexGrow={1}>
+                    <img src={Logo} className={classes.logo}/>
+                </Box>
+            </Toolbar>
+        </AppBar>
+    );
+}
+
+function Header() {
+    const isBigScreen = useMediaQuery('(min-width:1366px)');
+    return (
+        isBigScreen ? <BigScreen /> :  <SmallScreen />
     );
 }
 
