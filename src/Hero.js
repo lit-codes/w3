@@ -108,11 +108,11 @@ function SmallScreen() {
     );
 }
 
-function WhyUs() {
+function Hero() {
     const isBigScreen = useMediaQuery('(min-width:1366px)');
     return (
-        isBigScreen ? <BigScreen /> :  <SmallScreen />
+        isBigScreen ? <BigScreen /> : <SmallScreen />
     );
 }
 
-export default WhyUs;
+export default Hero;
