@@ -55,7 +55,7 @@ function SmallScreen() {
     const classes = useStyles();
 
     return (
-        <AppBar position="fixed" className={classes.transparentAppBar}>
+        <AppBar position="fixed">
             <Toolbar>
                 <Box flexGrow={1}>
                     <img src={Logo} className={classes.logo}/>
