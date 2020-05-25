@@ -100,7 +100,7 @@ function App(props) {
     }, []);
 
     return (
-        <NoSsr>
+        <NoSsr defer="true">
             <CssBaseline />
             <MuiThemeProvider theme = { theme }>
                 <Home />
