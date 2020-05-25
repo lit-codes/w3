@@ -90,7 +90,7 @@ function SmallScreen() {
                     <Typography className={classes.title}>
                         Lit Codes is a remote-first global community built for
                         passionate developers who are dedicated to life-long
-                        learning and builing things.
+                        learning and building things.
                     </Typography>
                 </Box>
                 <Box className={classes.footerLinks}>
