@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 /* Material UI Components */
 import { makeStyles } from '@material-ui/core/styles';
+import NoSsr from '@material-ui/core/NoSsr';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
@@ -111,7 +112,9 @@ function SmallScreen() {
 function Hero() {
     const isBigScreen = useMediaQuery('(min-width:1366px)');
     return (
-        isBigScreen ? <BigScreen /> : <SmallScreen />
+        <NoSsr>
+            { isBigScreen ? <BigScreen /> : <SmallScreen /> }
+        </NoSsr>
     );
 }
 

@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 /* Material UI Theme */
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import NoSsr from '@material-ui/core/NoSsr';
 /* Pages */
 import Favicon from './images/Favicon.png';
 import Home from './Home';
@@ -100,12 +99,12 @@ function App(props) {
     }, []);
 
     return (
-        <NoSsr defer="true">
+        <>
             <CssBaseline />
             <MuiThemeProvider theme = { theme }>
                 <Home />
             </MuiThemeProvider>
-        </NoSsr>
+        </>
     );
 }
 

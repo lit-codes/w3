@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "parcel -d lit-codes watch src/index.html",
-    "build": "parcel -d lit-codes build src/index.html",
+    "build": "NODE_ENV=production parcel -d lit-codes build src/index.html",
     "style": "eslint --fix *.js",
     "staging": "cd lit-codes && now -A ../now.json",
     "deploy": "cd lit-codes && now --prod -A ../now.json"
