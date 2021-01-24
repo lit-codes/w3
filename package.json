@@ -3,8 +3,8 @@
     "start": "parcel -d lit-codes watch src/index.html",
     "build": "NODE_ENV=production parcel -d lit-codes build src/index.html",
     "style": "eslint --fix *.js",
-    "staging": "cd lit-codes && now -A ../now.json",
-    "deploy": "cd lit-codes && now --prod -A ../now.json"
+    "staging": "cd lit-codes && vercel -A ../vercel.json",
+    "deploy": "cd lit-codes && vercel --prod -A ../vercel.json"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.3",
@@ -20,7 +20,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "now": "^19.0.1",
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "vercel": "^21.1.0"
   }
 }
