@@ -94,7 +94,7 @@ function BigScreen() {
                                 <Box display="flex">
                                     <ScheduleIcon className={classes.time} /> 05/15/2020
                                 </Box>
-                                <Button color="secondary" variant="contained" className={classes.readMore} target="_blank" href="https://blog.lit.codes/intro-to-benchmarking-and-profiling/">
+                                <Button color="secondary" variant="contained" className={classes.readMore} target="_blank" href="https://blog.lit.codes/introduction-to-benchmarking-and-profiling/">
                                     Read Here
                                 </Button>
                             </CardActions>
