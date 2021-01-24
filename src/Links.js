@@ -20,6 +20,7 @@ function Links() {
             <Button className={classes.link} color="inherit" href="#about">About</Button>
             <Button className={classes.link} color="inherit" href="#create">Contact Us</Button>
             <Button className={classes.link} color="inherit" href="#join">Join Us</Button>
+            <Button className={classes.link} color="inherit" target="_blank" href="https://github.com/lit-codes">GitHub</Button>
             <Button className={classes.link} color="inherit" target="_blank" href="https://blog.lit.codes/">Blog</Button>
         </>
     );
